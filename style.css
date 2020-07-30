@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules and margin/padding removal */
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* lobotomized owl */
+header * + *, article * + *, aside * + *, footer * + * {
+  margin-top: 1em;
+}
+
+/* lobot owl fixes*/
+ul, ol {
+  padding-left: 40px;
+}
+
+li {
+  margin-top: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --clr-primary: hsl(282, 100%, 44%);
+  --clr-primary-light: hsl(282, 100%, 80%);
+  --clr-primary-dark: hsl(282, 100%, 30%);
+  --clr-secondary: hsl(173, 100%, 34%);
+  --clr-secondary-light: hsl(173, 100%, 80%);
+  --clr-secondary-dark: hsl(173, 50%, 20%);
+  --clr-complement: hsl(19, 100%, 65%);
+  --clr-complement-light: hsl(19, 100%, 80%);
+  --clr-complement-dark: hsl(19, 100%, 30%);
+  --clr-gray-dark: hsl(282, 10%, 20%);
+  --clr-gray-light: hsl(288, 10%, 80%);
+}
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all ease-in-out 125ms;
+  transition: all ease-in-out 125ms;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover {
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Varela Round", sans-serif;
+  margin-bottom: 1em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.container:not(section) {
+  max-width: 1200px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: -10000px;
+  top: -15px;
+  opacity: 0;
+}
+
+header {
+  background: -webkit-gradient(linear, left bottom, right top, from(var(--clr-secondary-light)), to(var(--clr-complement-light)));
+  background: linear-gradient(to top right, var(--clr-secondary-light), var(--clr-complement-light));
+  margin-top: 0;
+  padding: 2em 0;
+}
+header .container {
+  display: grid;
+}
+header .container h1 {
+  margin-bottom: 0;
+}
+header .container h2 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.2em;
+  margin-top: 0.25em;
+  margin-bottom: 0;
+}
+header .container p {
+  font-size: 0.9em;
+  margin-bottom: 2em;
+}
+
+.link-github {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid var(--clr-complement);
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: all ease-in-out 125ms;
+  transition: all ease-in-out 125ms;
+  color: var(--clr-complement);
+}
+.link-github span, .link-github img, .link-github svg {
+  display: block;
+  margin-right: 0.5em;
+  fill: var(--clr-complement);
+  max-height: 3em;
+}
+.link-github:hover, .link-github:focus {
+  background-color: var(--clr-complement-light);
+  border-color: var(--clr-complement-light);
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+.link-github:hover span, .link-github:hover img, .link-github:hover svg, .link-github:focus span, .link-github:focus img, .link-github:focus svg {
+  fill: var(--clr-primary);
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  background-color: var(--clr-secondary-light);
+  margin-top: 0;
+  min-height: 4em;
+}
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  width: 80%;
+  max-width: 1200px;
+}
+nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  text-align: center;
+  -webkit-transition: all ease-in-out 125ms;
+  transition: all ease-in-out 125ms;
+}
+nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  padding: 0em 1em;
+}
+nav ul li:hover {
+  background-color: rgba(224, 153, 255, 0.2);
+}
+
+main {
+  position: relative;
+}
+main > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+main > .container h1, main > .container h2, main > .container h3, main > .container h4, main > .container h5, main > .container h6 {
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+
+article, aside {
+  padding: 2em 0;
+}
+
+#about .container:last-child p:last-child {
+  text-align: center;
+  padding: 1.5em;
+  background: -webkit-gradient(linear, left bottom, right top, from(var(--clr-complement-dark)), to(var(--clr-primary-dark)));
+  background: linear-gradient(to top right, var(--clr-complement-dark), var(--clr-primary-dark));
+  margin-top: 2em;
+  color: white;
+  border-radius: 100em;
+}
+#about .container:last-child p:last-child a {
+  color: var(--clr-primary-light);
+}
+
+.link-guidelines {
+  border: 3px solid var(--clr-complement);
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: all ease-in-out 125ms;
+  transition: all ease-in-out 125ms;
+  color: var(--clr-complement);
+}
+.link-guidelines:hover, .link-guidelines:focus {
+  background-color: var(--clr-complement-light);
+  border-color: var(--clr-complement-light);
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+#files {
+  margin-top: 2em;
+  padding: 1em;
+  border: 3px solid var(--clr-primary);
+  border-radius: 0.25em;
+}
+#files .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#files .container h3 {
+  font-size: 1.8em;
+  width: 100%;
+  margin-top: 0;
+  text-align: center;
+}
+
+.link-downloadcss, .link-downloadhtml, .link-codepen {
+  padding: 2em;
+  margin: 0.5em;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  text-align: center;
+  border-radius: 0.25em;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--clr-complement-light)), to(var(--clr-secondary-light)));
+  background-image: linear-gradient(to bottom right, var(--clr-complement-light), var(--clr-secondary-light));
+}
+.link-downloadcss::before, .link-downloadhtml::before, .link-codepen::before {
+  content: "";
+  display: block;
+  margin-bottom: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 4em;
+}
+
+.link-downloadcss::before {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg");
+}
+
+.link-downloadhtml::before {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg");
+}
+
+.link-codepen::before {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/75/Font_Awesome_5_brands_codepen.svg");
+}
+
+.profile {
+  background: -webkit-gradient(linear, left top, right bottom, from(var(--clr-primary)), to(var(--clr-secondary)));
+  background: linear-gradient(to bottom right, var(--clr-primary), var(--clr-secondary));
+  color: white;
+}
+.profile a {
+  color: var(--clr-primary-light);
+}
+.profile ul {
+  list-style: none;
+  padding-left: 0;
+}
+.profile li {
+  display: block;
+}
+.profile .container > a {
+  border: 3px solid var(--clr-complement);
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: all ease-in-out 125ms;
+  transition: all ease-in-out 125ms;
+  color: var(--clr-complement);
+}
+.profile .container > a:hover, .profile .container > a:focus {
+  background-color: var(--clr-complement-light);
+  border-color: var(--clr-complement-light);
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+#profile-title {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.profile-title {
+  font-size: 2em;
+}
+
+.profile-author {
+  margin-top: 0.5em;
+}
+
+.features {
+  list-style: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.features li {
+  padding: 1.5em;
+  border-radius: 0.25em;
+  margin: 0.5em;
+}
+.features li a, .features li span {
+  display: block;
+}
+.features li a {
+  font-size: 1.5em;
+}
+.features li:nth-child(1) {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#013785), to(#ef8994));
+  background-image: linear-gradient(to bottom right, #013785, #ef8994);
+  color: white;
+}
+.features li:nth-child(1) a {
+  color: var(--clr-primary-light);
+}
+.features li:nth-child(2) {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#4dbda7), to(#f9ba33));
+  background-image: linear-gradient(to bottom right, #4dbda7, #f9ba33);
+}
+.features li:nth-child(3) {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#6e1a6d), to(#f4504b));
+  background-image: linear-gradient(to bottom right, #6e1a6d, #f4504b);
+  color: white;
+}
+.features li:nth-child(3) a {
+  color: var(--clr-primary-light);
+}
+
+.link-allstyles {
+  border: 3px solid var(--clr-complement);
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: all ease-in-out 125ms;
+  transition: all ease-in-out 125ms;
+  color: var(--clr-complement);
+}
+.link-allstyles:hover, .link-allstyles:focus {
+  background-color: var(--clr-complement-light);
+  border-color: var(--clr-complement-light);
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+.page-footer {
+  background-color: var(--clr-secondary-dark);
+  color: white;
+  padding: 2em 0;
+}
+.page-footer ul {
+  list-style: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.page-footer ul > * {
+  margin: 0.5em;
+}
+.page-footer ul .link-twittercontact, .page-footer ul .link-rss, .page-footer ul .link-support {
+  padding: 1.25em 2em;
+  border: 3px solid black;
+  border-radius: 0.25em;
+  -webkit-transition: all ease-in-out 125ms;
+  transition: all ease-in-out 125ms;
+}
+.page-footer ul .link-twittercontact:hover, .page-footer ul .link-twittercontact:focus, .page-footer ul .link-rss:hover, .page-footer ul .link-rss:focus, .page-footer ul .link-support:hover, .page-footer ul .link-support:focus {
+  text-decoration: none;
+}
+.page-footer ul .link-twittercontact {
+  border-color: #1ca0f2;
+  color: var(--clr-primary-light);
+}
+.page-footer ul .link-twittercontact:hover, .page-footer ul .link-twittercontact:focus {
+  color: var(--clr-primary-dark);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#0c84cf), to(#4db4f5));
+  background-image: linear-gradient(to bottom right, #0c84cf, #4db4f5);
+}
+.page-footer ul .link-rss {
+  border-color: #ee7f2f;
+  color: var(--clr-primary-light);
+}
+.page-footer ul .link-rss:hover, .page-footer ul .link-rss:focus {
+  color: var(--clr-primary-dark);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#d96512), to(#f29c5f));
+  background-image: linear-gradient(to bottom right, #d96512, #f29c5f);
+}
+.page-footer ul .link-support {
+  border-color: #2764f1;
+  color: var(--clr-primary-light);
+}
+.page-footer ul .link-support:hover, .page-footer ul .link-support:focus {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#0e4ad8), to(#5786f4));
+  background-image: linear-gradient(to bottom right, #0e4ad8, #5786f4);
+}
+
+@media (min-width: 1200px) {
+  main article#guidelines, main article#contribute {
+    width: calc(50% - 1em);
+  }
+  main article#contribute {
+    margin-left: 2em;
+  }
+
+  header .container h1::before {
+    content: "Only using CSS Flexbox!";
+    color: #ff7038;
+    position: absolute;
+    right: 0;
+    font-size: 0.5em;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(20deg) translateY(75px);
+            transform: rotate(20deg) translateY(75px);
+  }
+  header .container h2 {
+    width: 85%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
